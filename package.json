@@ -1,0 +1,20 @@
+{
+  "name": "aoc21",
+  "version": "1.0.0",
+  "description": "Advent of Code 2021",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykrueng/AoC2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ykrueng/AoC2021/issues"
+  },
+  "homepage": "https://github.com/ykrueng/AoC2021#readme"
+}
