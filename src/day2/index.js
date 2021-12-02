@@ -7,42 +7,20 @@ exports.testArr = [
   "forward 2",
 ]
 
-exports.part1 = function (arr) {
-  let distance = 0
-  let depth = 0
-
-  for (let direction of arr) {
-    const [command, input] = direction.split(' ');
-    const number = parseInt(input)
-
-    if (command === 'forward') {
-      distance += number
-    } else if (command === 'up') {
-      depth -= number
-    } else {
-      depth += number
-    }
+exports.part1 = cmds => {
+  x=0; y=0
+  for (c of cmds) {
+    n=parseInt(c.match(/\d+$/g)[0]);
+    (c[0]=='f'&&(x+=n))||(c[0]=='u'&&(y-=n))||(c[0]=='d'&&(y+=n))
   }
-  return distance * depth
+  return x*y
 }
 
-exports.part2 = function (arr) {
-  let distance = 0
-  let depth = 0
-  let aim = 0
-
-  for (let direction of arr) {
-    const [command, input] = direction.split(' ');
-    const number = parseInt(input)
-
-    if (command === 'forward') {
-      distance += number
-      depth += (number * aim)
-    } else if (command === 'up') {
-      aim -= number
-    } else {
-      aim += number
-    }
+exports.part2 = cmds => {
+  x=0; y=0; a=0
+  for (c of cmds) {
+    n=parseInt(c.match(/\d+$/g)[0]);
+    (c[0]=='f'&&(x+=n)&&(y+=n*a))||(c[0]=='u'&&(a-=n))||(c[0]=='d'&&(a+=n))
   }
-  return distance * depth
+  return x*y
 }
