@@ -1,27 +1,14 @@
 const { getInputArray } = require("./src/utils")
-const { sonarSweep, sonarSweepSliding } = require("./src/day1")
+const { part1, part2, testArr } = require("./src/day2")
 
-const arr = getInputArray("src/day1/input.txt");
-
-const testArr = [
-  199,
-  200,
-  208,
-  210,
-  200,
-  207,
-  240,
-  269,
-  260,
-  263,
-]
+const arr = getInputArray("src/day2/input.txt", "\n", "string");
 
 function main() {
   console.log('Advent of Code 2001')
-  console.log('Ex.1-test: ', sonarSweep(testArr))
-  console.log('Ex.1: ', sonarSweep(arr))
-  console.log('Ex.2-test: ', sonarSweepSliding(testArr))
-  console.log('Ex.2: ', sonarSweepSliding(arr))
+  console.log('Ex.1-test: ', part1(testArr))
+  console.log('Ex.1: ', part1(arr))
+  console.log('Ex.2-test: ', part2(testArr))
+  console.log('Ex.2: ', part2(arr))
 }
 
 main()
