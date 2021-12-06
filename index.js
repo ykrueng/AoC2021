@@ -1,7 +1,7 @@
 const { getInputArray } = require("./src/utils")
-const { part1, part2, testArr } = require("./src/day5")
+const { part1, part2, testArr } = require("./src/day6")
 
-const arr = getInputArray("src/day5/input.txt", "\n", "string");
+const arr = getInputArray("src/day6/input.txt", ",", "string");
 
 function main() {
   console.log('Advent of Code 2001')
